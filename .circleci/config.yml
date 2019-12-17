@@ -1,14 +1,11 @@
+# .circle/config.yml
 version: 2.1
-
-jobs:
-  build:
-    docker: 
-      - image: circleci/node:8 # the primary container, where your job's commands are run
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world"
+orbs:
+  cypress: cypress-io/cypress@1 # Versions are changing a lot, leave off specifics to get the latest
 
 workflows:
   test_then_build:
     jobs:
-      - build
+      - cypress/run:
+          start: npm run serve # We need our server running
+          wait-on: 'http://localhost:8080' # 
