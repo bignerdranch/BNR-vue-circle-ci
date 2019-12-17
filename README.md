@@ -1,34 +1,8 @@
-# vue-circle-ci-config
+<p align="center">
+    <img width="180" src="./bnr_logo.png" alt="BNR logo">
+</p>
 
-## Project setup
-```
-yarn install
-```
+<h1 align="center">BNR Vue CLI Build Pipeline</h1>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Setting up and running a build and test pipeline using CircleCI, a hello world application
+built with Vue CLI and Heroku for deployment.  
