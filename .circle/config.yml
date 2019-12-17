@@ -1,0 +1,11 @@
+# .circle/config.yml
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1 # Versions are changing a lot, leave off specifics to get the latest
+
+workflows:
+  test_then_build:
+    jobs:
+      - cypress/run:
+          start: npm run serve # We need our server running
+          wait-on: 'http://localhost:8080' # 
